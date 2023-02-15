@@ -20,6 +20,7 @@ let server=http.createServer((req,res)=>{
             let realTimeData=arrayData.map((ele)=>modifiedData(homeFile,ele)).join("");
             res.write(realTimeData);
             //console.log(realTimeData);
+            res.end();
 
         })
         .on("end",(err)=>{
